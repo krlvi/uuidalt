@@ -1,10 +1,10 @@
 use regex::Regex;
-use std::io::{self, Read};
+use std::io::{self, BufRead};
 
 fn main() -> io::Result<()> {
-    let mut buffer = String::new();
-    io::stdin().read_to_string(&mut buffer)?;
-    println!("{}", handle_input(String::from(buffer.trim())));
+    for line in io::stdin().lock().lines() {
+        println!("{}", handle_input(String::from(line.unwrap().trim())));
+    }
     Ok(())
 }
 
