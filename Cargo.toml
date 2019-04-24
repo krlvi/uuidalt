@@ -1,0 +1,8 @@
+[package]
+name = "uuidalt"
+version = "0.1.0"
+authors = ["Kiril Videlov <kiril.vi@runbox.no>"]
+edition = "2018"
+
+[dependencies]
+regex = "1.1.6"
